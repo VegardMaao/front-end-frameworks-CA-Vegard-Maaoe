@@ -13,6 +13,9 @@ function Nav() {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+          <li>
+            <Link to="/posts">Shop</Link>
+          </li>
         </ul>
       </nav>
     )

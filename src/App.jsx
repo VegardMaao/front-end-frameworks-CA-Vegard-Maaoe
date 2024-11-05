@@ -2,16 +2,17 @@ import React, { createContext, useContext, useReducer, useEffect, useState } fro
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 // import * as S from "./App.styles.js";
 import Layout from "./components/index.jsx";
-import {Home, Products, Contact} from "./pages/index.js"
+import * as navLinks from "./pages/index.js"
 
 function App() {
   return (
     <div>
      <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="products" element={<Products />} />
-          <Route path="contact" element={<Contact />} />
+          <Route index element={<navLinks.Home />} />
+          <Route path="products" element={<navLinks.Products />} />
+          <Route path="contact" element={<navLinks.Contact />} />
+          <Route path="posts" element={<navLinks.Shop />}/>
         </Route>
       </Routes>
     </div>
