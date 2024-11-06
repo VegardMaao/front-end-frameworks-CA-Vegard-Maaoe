@@ -15,18 +15,16 @@ export default function Shop() {
             return <div>Error loading data</div>;
           }
     
-        console.log(data);
-    
         return <div>
             <h1>Shop:</h1>
                 {data.map((item) => (
+                  <Link to={`/singleItem?id=${item.id}`}>
                     <S.ShopItem key={item.id}>
-                        <Link to={`/singleItem?id=${item.id}`}>
                         <S.Thumbnail src={item.image.url} alt={item.image.alt}/>
                         <h2>{item.title}</h2>
                         <p>{item.description}</p>
-                        </Link>
                     </S.ShopItem>
+                  </Link>
                 ))}
         </div>  
 };

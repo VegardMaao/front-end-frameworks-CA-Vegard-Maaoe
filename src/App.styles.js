@@ -17,6 +17,7 @@ export const ListItem = styled.li`
 export const Thumbnail = styled.img`
   max-height: 100px;
   max-width: 100px; 
+  align-self: center;
 `;
 
 export const ShopItem = styled.div`
