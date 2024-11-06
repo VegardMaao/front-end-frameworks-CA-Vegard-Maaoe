@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useGetAPI } from "../api/index.js";
 import {  Link } from "react-router-dom";
 import * as S from "../App.styles.js";

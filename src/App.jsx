@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useReducer, useEffect, useState } from "react";
-import { Routes, Route, Link, Outlet } from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/index.jsx";
 import * as navLinks from "./pages/index.js"
 
