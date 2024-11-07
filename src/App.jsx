@@ -9,7 +9,6 @@ function App() {
      <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<navLinks.Home />} />
-          <Route path="products" element={<navLinks.Products />} />
           <Route path="contact" element={<navLinks.Contact />} />
           <Route path="posts" element={<navLinks.Shop />}/>
           <Route path="singleItem" element={<navLinks.SingleItem />} />
