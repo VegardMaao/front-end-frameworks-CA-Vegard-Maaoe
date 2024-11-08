@@ -1,6 +1,6 @@
-import { useGetAPI } from "../api/index.js";
+import { useGetAPI } from "../../api/index.js";
 import {  Link } from "react-router-dom";
-import * as S from "../App.styles.js";
+import * as S from "../../App.styles.js";
 
 export default function Shop() {
   const url = `https://v2.api.noroff.dev/online-shop`;

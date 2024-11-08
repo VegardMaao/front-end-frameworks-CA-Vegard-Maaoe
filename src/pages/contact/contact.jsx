@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useForm } from "react-hook-form";
-import * as S from "../App.styles";
+import * as S from "../../App.styles";
 
 const emailRegex = `^[^\s@]+@[^\s@]+\.[^\s@]+$`;
 

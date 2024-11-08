@@ -1,6 +1,6 @@
-import Home from "./home";
-import Contact from "./contact";
-import Shop from "./shop";
-import SingleItem from "./singleItem";
+import Home from "./home/home";
+import Contact from "./contact/contact";
+import Shop from "./shop/shop";
+import SingleItem from "./singleItem/singleItem";
 
 export {Home, Contact, Shop, SingleItem};
