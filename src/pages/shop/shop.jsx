@@ -1,6 +1,7 @@
 import { useGetAPI } from "../../api/index.js";
 import {  Link } from "react-router-dom";
 import * as S from "../../App.styles.js";
+import Metadata from "../../components/footer/metadata/metadata";
 
 export default function Shop() {
   const url = `https://v2.api.noroff.dev/online-shop`;
@@ -15,6 +16,7 @@ export default function Shop() {
           }
     
         return <div>
+          <Metadata title="Shop" description="Shop"/>
             <h1>Shop:</h1>
                 {data.map((item) => (
                   <Link key={item.id} to={`/singleItem?id=${item.id}`}>

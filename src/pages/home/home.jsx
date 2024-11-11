@@ -1,3 +1,8 @@
+import Metadata from "../../components/footer/metadata/metadata";
+
+
 export default function Home() {
-    return <div>Home</div>
+    return <div>
+      <Metadata title="Home" description="Hello"/>
+      Home</div>
   }

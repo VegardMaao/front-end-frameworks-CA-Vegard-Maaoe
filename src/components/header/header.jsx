@@ -3,6 +3,9 @@ import {  Link } from "react-router-dom";
 function Nav() {
     return (
       <nav>
+        <>
+        <i class="fa-solid fa-house"/>
+        </>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -11,7 +14,7 @@ function Nav() {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/posts">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </li>
         </ul>
       </nav>
