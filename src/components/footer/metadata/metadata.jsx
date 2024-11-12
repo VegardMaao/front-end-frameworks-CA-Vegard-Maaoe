@@ -4,7 +4,7 @@ export default function Metadata({title, description} ) {
     return <Helmet>
     <meta name="author" content="Vegard Maaø" />
     <meta name="description" content={`${description}`} />
-    <title>{`${title}`}</title>
+    <title>{`${title} | Online Shop`}</title>
     <script src="https://kit.fontawesome.com/efafec28fb.js" crossorigin="anonymous"></script>
     </Helmet>
 }
