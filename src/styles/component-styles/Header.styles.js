@@ -2,10 +2,14 @@ import styled from "styled-components";
 import { device } from "../BreakPoints";
 
 const StyledHeader = styled.header`
-    ${console.log(device[0])}
     nav{
     display: flex;
     flex-direction: row;
+    
+        i{
+            font-size: 2rem;
+            margin: 10px
+        }
 
         ul{
             display: flex;
@@ -15,6 +19,11 @@ const StyledHeader = styled.header`
             list-style: none;
             margin: auto;
             padding: 1rem;
+            align-items: center;
+
+            @media ${device.sm}{
+                        
+            }
     }
 `;
 
