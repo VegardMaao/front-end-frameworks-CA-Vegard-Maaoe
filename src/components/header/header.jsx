@@ -1,20 +1,24 @@
 import {  Link } from "react-router-dom";
+import * as S from "../../styles/index"
 
 function Nav() {
     return (
       <nav>
         <>
-        <i class="fa-solid fa-house"/>
+        
         </>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"><i className="fa-solid fa-house"/></Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
           </li>
           <li>
             <Link to="/shop">Shop</Link>
+          </li>
+          <li>
+            <Link to="/checkout"><i className="fa-solid fa-cart-shopping"></i></Link>
           </li>
         </ul>
       </nav>
@@ -24,9 +28,8 @@ function Nav() {
 
 export default function Header() {
     return (
-      <header>
-        <div>Header with Logo and nav</div>
+      <S.StyledHeader>
         <Nav />
-      </header>
+      </S.StyledHeader>
     )
   }

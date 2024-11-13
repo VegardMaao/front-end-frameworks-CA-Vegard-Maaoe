@@ -16,6 +16,7 @@ function App() {
             <Route path="contact" element={<navLinks.Contact />} />
             <Route path="shop" element={<navLinks.Shop />}/>
             <Route path="singleItem" element={<navLinks.SingleItem />} />
+            <Route path="checkout" element={<navLinks.CheckOut/>} />
           </Route>
         </Routes>
       </HelmetProvider>
