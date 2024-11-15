@@ -37,9 +37,17 @@ const TextLink = styled(NavLink)`
 `;
 
 const IconLink = styled(NavLink)`
+    transition: 0.3s;
     font-size: 4rem;
     color: ${theme.color.deepblue};
-    margin: auto 2rem;
+    margin: auto 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+
+    &: hover{
+    color: ${theme.color.orange};
+    background: ${theme.color.deepblue};
+    }
     
     @media${device.sm}{
     margin: auto 1rem;

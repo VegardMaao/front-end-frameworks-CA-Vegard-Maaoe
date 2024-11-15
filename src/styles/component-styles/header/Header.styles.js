@@ -41,6 +41,7 @@ export const NavLinkWrapper = styled.div`
 `;
 
 export const StyledNavLink = styled(NavLink)`
+    transition: 0.3s;
     text-decoration: none;
     color: ${theme.color.deepblue};
     margin-left: 2rem;
