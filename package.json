@@ -16,7 +16,12 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.10",
     "web-vitals": "^2.1.4",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "pages": "file:src/pages",
+    "styles": "file:src/styles",
+    "components": "file:src/components",
+    "api": "file:src/api",
+    "assets": "file:src/assets"
   },
   "scripts": {
     "start": "react-scripts start",

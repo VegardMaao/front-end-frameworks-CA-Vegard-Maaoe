@@ -1,31 +1,30 @@
 import { footerText, footerIcons } from "../../dataObjects/footerContent";
-import * as S from "../../styles/index";
+import { footerStyles } from "../../styles/index";
 
 
 
 function FooterText(content) {
   const arr = content.content;
-  return <S.footerStyles.FooterContentWrapper direction="column">
+  return <footerStyles.FooterContentWrapper direction="column">
     {arr.map((link) => (
-            <S.footerStyles.TextLink key={link.title} to={link.link} target={link.target}>{link.title}</S.footerStyles.TextLink>
+            <footerStyles.TextLink key={link.title} to={link.link} target={link.target}>{link.title}</footerStyles.TextLink>
           ))}
-    </S.footerStyles.FooterContentWrapper>
+    </footerStyles.FooterContentWrapper>
 }
 
 function FooterIcons(content) {
   const arr = content.content;
-  console.log(arr);
-  return <S.footerStyles.FooterContentWrapper direction="row">
+  return <footerStyles.FooterContentWrapper direction="row">
     {arr.map((link) => (
-            <S.footerStyles.IconLink key={link.title} to={link.link} target={link.target} dangerouslySetInnerHTML={{__html:link.title}}></S.footerStyles.IconLink>
+            <footerStyles.IconLink key={link.title} to={link.link} target={link.target} dangerouslySetInnerHTML={{__html:link.title}}></footerStyles.IconLink>
           ))}
-  </S.footerStyles.FooterContentWrapper>
+  </footerStyles.FooterContentWrapper>
 }
 
 export default function Footer() {
-    return <S.footerStyles.FooterWrapper>
+    return <footerStyles.FooterWrapper>
       <FooterText content={footerText}/>
       <FooterIcons content={footerIcons}/>
-    </S.footerStyles.FooterWrapper>
+    </footerStyles.FooterWrapper>
   }
   
