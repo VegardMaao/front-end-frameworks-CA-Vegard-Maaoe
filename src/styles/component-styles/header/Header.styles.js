@@ -56,6 +56,7 @@ export const StyledNavLink = styled(NavLink)`
     }
 
     @media(${device.sm}){
+    font-size: 1.3rem;
     display: block; 
     margin: 2rem auto;
     }

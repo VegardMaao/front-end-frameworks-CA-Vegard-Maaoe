@@ -13,7 +13,7 @@ function Nav() {
     return (
       <S.headerStyles.NavbarWrapper>
         <Link className="logoWrapper" to={"/"}><S.Logo/></Link>
-        <S.headerStyles.styledHamburgerIcon onClick={() => setShowMenu(!showMenu)} ><i class="fa-solid fa-bars"></i></S.headerStyles.styledHamburgerIcon>
+        <S.headerStyles.styledHamburgerIcon onClick={() => setShowMenu(!showMenu)} ><i className="fa-solid fa-bars"></i></S.headerStyles.styledHamburgerIcon>
         <S.headerStyles.NavLinkWrapper showOnMobile={showMenu}>
           {headerLinks.map((link) => (
             <S.headerStyles.StyledNavLink className={pathname === link.title ? "active" : ""} key={link.title} to={link.href}>{link.title}</S.headerStyles.StyledNavLink>
