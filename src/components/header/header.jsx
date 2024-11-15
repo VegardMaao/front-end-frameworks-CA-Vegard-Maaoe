@@ -8,8 +8,7 @@ function Nav() {
   const [showMenu, setShowMenu] = useState(false);
   const [showCart, setShowCart] = useState(true);
 
-  const location = useLocation();
-  const {pathname} = location;
+  const {pathname} = useLocation();
 
     return (
       <S.headerStyles.NavbarWrapper>
