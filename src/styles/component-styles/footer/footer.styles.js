@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { theme } from "../../theme";
 
 const FooterWrapper = styled.footer`
-    position: fixed;
+    position: absoloute;
     min-height: 150px;
     background-color: ${theme.color.offwhite};
     bottom: 0px;
