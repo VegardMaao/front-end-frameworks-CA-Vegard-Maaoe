@@ -1,8 +1,11 @@
+import { useState } from "react";
 import {  Link, useLocation } from "react-router-dom";
 import * as S from "../../styles/index";
 
 function Nav() {
-  
+
+  const [showMenu, setShowMenu] = useState(false);
+
   const links = [{
     title: "Home",
     href: "/"
@@ -23,9 +26,10 @@ function Nav() {
     return (
       <S.NavbarWrapper>
         <Link className="logoWrapper" to={"/"}><S.Logo/></Link>
-        <S.NavLinkWrapper>
+        <S.styledHamburgerIcon onClick={() => setShowMenu(!showMenu)} ><i class="fa-solid fa-bars"></i></S.styledHamburgerIcon>
+        <S.NavLinkWrapper showOnMobile={showMenu}>
           {links.map((link) => (
-            <S.StyledNavLink className={pathname == link.title ? "active" : ""} key={link.title} to={link.href}>{link.title}</S.StyledNavLink>
+            <S.StyledNavLink className={pathname === link.title ? "active" : ""} key={link.title} to={link.href}>{link.title}</S.StyledNavLink>
           ))}
         </S.NavLinkWrapper>
       </S.NavbarWrapper>
