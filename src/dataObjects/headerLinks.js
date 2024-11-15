@@ -7,7 +7,4 @@ export const headerLinks = [{
   },{
     title: "Shop",
     href: "/shop"
-  },{
-    title: "Cart",
-    href: "/checkout"
   }]

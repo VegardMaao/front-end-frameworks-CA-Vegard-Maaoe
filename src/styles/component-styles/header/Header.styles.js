@@ -79,7 +79,7 @@ export const StyledLogo = styled.img`
     width: 150px;
 `;  
 
-export const styledHamburgerIcon = styled.div`
+export const StyledHamburgerIcon = styled.div`
     z-index: 1;
     display: none;
     position: absolute;
@@ -92,5 +92,21 @@ export const styledHamburgerIcon = styled.div`
 
     @media(${device.sm}){
     display: block;
+    }
+`;
+
+export const CartIcon = styled(NavLink)`
+    z-index: 1;
+    display: ${(props) => props.showCart ? "block" : "none"};
+    margin-left: auto;
+
+    i{
+    font-size: 2rem;
+    }
+
+    @media${device.sm}{
+    position: absolute;
+    right: 80px;
+    top: 30px;
     }
 `;
