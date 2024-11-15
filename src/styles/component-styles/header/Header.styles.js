@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { device } from "../../BreakPoints";
-import { NavLink } from "react-router-dom";
 import { theme } from "../../theme";
+import {device} from "../../BreakPoints"
+import { NavLink } from "react-router-dom";
 
 export const NavbarWrapper = styled.nav`
     display: flex;

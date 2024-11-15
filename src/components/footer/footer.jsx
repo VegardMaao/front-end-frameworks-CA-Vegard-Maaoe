@@ -1,5 +1,5 @@
-import { footerText, footerIcons } from "../../dataObjects/footerContent";
-import { footerStyles } from "../../styles/index";
+import { footerText, footerIcons } from "dataObjects";
+import { footerStyles } from "styles";
 
 
 

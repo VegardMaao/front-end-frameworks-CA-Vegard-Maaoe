@@ -21,6 +21,7 @@
     "styles": "file:src/styles",
     "components": "file:src/components",
     "api": "file:src/api",
+    "dataObjects": "file:src/dataObjects",
     "assets": "file:src/assets"
   },
   "scripts": {

@@ -1,6 +1,6 @@
-import { useGetAPI } from "../../api/index.js";
+import { useGetAPI } from "api/index.js";
 import { Link, useLocation } from "react-router-dom";
-import * as S from "../../App.styles.js";
+import {ShopItem, Thumbnail} from "../../App.styles";
 
 
 export default function ListAllItems() {
@@ -19,11 +19,11 @@ export default function ListAllItems() {
     return <div>
         {data.map((item) => (
         <Link key={item.id} to={`${pathname}/${item.id}`}>
-          <S.ShopItem>
-              <S.Thumbnail src={item.image.url} alt={item.image.alt}/>
+          <ShopItem>
+              <Thumbnail src={item.image.url} alt={item.image.alt}/>
               <h2>{item.title}</h2>
               <p>{item.description}</p>
-          </S.ShopItem>
+          </ShopItem>
         </Link>
       ))}
     </div>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { device } from "../../BreakPoints";
 import { NavLink } from "react-router-dom";
+import { device } from "../../BreakPoints";
 import { theme } from "../../theme";
 
 export const FooterWrapper = styled.footer`

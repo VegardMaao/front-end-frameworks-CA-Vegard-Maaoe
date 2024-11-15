@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Shop from "./shop";
 import SingleItem from "./singleItem/singleItem";
-import CheckOut from "./checkout/checkout";
+import CheckOut from "../checkout/checkout";
 
 
 export function ShopRouter() {
