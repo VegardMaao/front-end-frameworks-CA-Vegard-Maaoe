@@ -1,4 +1,4 @@
-import Metadata from "../../components/metadata/metadata";
+import Metadata from "../../../components/metadata/metadata";
 
 
 export default function CheckOut() {

@@ -3,7 +3,7 @@ import { device } from "../../BreakPoints";
 import { NavLink } from "react-router-dom";
 import { theme } from "../../theme";
 
-const FooterWrapper = styled.footer`
+export const FooterWrapper = styled.footer`
     position: absoloute;
     min-height: 150px;
     background-color: ${theme.color.offwhite};
@@ -15,14 +15,14 @@ const FooterWrapper = styled.footer`
     justify-content: space-between;
 `;
 
-const FooterContentWrapper = styled.div`
+export const FooterContentWrapper = styled.div`
     display: flex;
     flex-direction: ${(props) => props.direction};
     max-width: 50vw;
     margin: auto 1rem;
 `;
 
-const TextLink = styled(NavLink)`
+export const TextLink = styled(NavLink)`
     margin: 0.7rem 0rem;
     text-decoration: none;
     font-size: 1rem;
@@ -36,7 +36,7 @@ const TextLink = styled(NavLink)`
     }
 `;
 
-const IconLink = styled(NavLink)`
+export const IconLink = styled(NavLink)`
     transition: 0.3s;
     font-size: 4rem;
     color: ${theme.color.deepblue};
@@ -53,5 +53,3 @@ const IconLink = styled(NavLink)`
     margin: auto 1rem;
     }
 `;
-
-export {FooterWrapper, FooterContentWrapper, TextLink, IconLink};

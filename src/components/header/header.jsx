@@ -13,7 +13,7 @@ function Nav() {
     return (
       <S.headerStyles.NavbarWrapper>
         <Link className="logoWrapper" to={"/"}><S.Logo/></Link>
-        <S.headerStyles.CartIcon to="/checkout" showCart={showCart} dangerouslySetInnerHTML={{__html: `<i class="fa-solid fa-cart-shopping"></i>`}}/> 
+        <S.headerStyles.CartIcon to="/shop/checkout" showCart={showCart} dangerouslySetInnerHTML={{__html: `<i class="fa-solid fa-cart-shopping"></i>`}}/> 
         <S.headerStyles.StyledHamburgerIcon onClick={() => setShowMenu(!showMenu)} dangerouslySetInnerHTML={{__html: '<i class="fa-solid fa-bars"></i>'}}></S.headerStyles.StyledHamburgerIcon>
         <S.headerStyles.NavLinkWrapper showOnMobile={showMenu}>
           {headerLinks.map((link) => (
