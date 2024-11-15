@@ -1,24 +1,11 @@
 import { useState } from "react";
 import {  Link, useLocation } from "react-router-dom";
+import { links } from "../../dataObjects/headerLinks";
 import * as S from "../../styles/index";
 
 function Nav() {
 
   const [showMenu, setShowMenu] = useState(false);
-
-  const links = [{
-    title: "Home",
-    href: "/"
-  }, {
-    title: "Contact",
-    href: "/contact"
-  },{
-    title: "Shop",
-    href: "/shop"
-  },{
-    title: "Cart",
-    href: "/checkout"
-  }]
 
   const location = useLocation();
   const {pathname} = location;
