@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {  Link, useLocation } from "react-router-dom";
-import { links } from "../../dataObjects/headerLinks";
+import { headerLinks } from "../../dataObjects/headerLinks";
 import * as S from "../../styles/index";
 
 function Nav() {
@@ -11,15 +11,15 @@ function Nav() {
   const {pathname} = location;
 
     return (
-      <S.NavbarWrapper>
+      <S.headerStyles.NavbarWrapper>
         <Link className="logoWrapper" to={"/"}><S.Logo/></Link>
-        <S.styledHamburgerIcon onClick={() => setShowMenu(!showMenu)} ><i class="fa-solid fa-bars"></i></S.styledHamburgerIcon>
-        <S.NavLinkWrapper showOnMobile={showMenu}>
-          {links.map((link) => (
-            <S.StyledNavLink className={pathname === link.title ? "active" : ""} key={link.title} to={link.href}>{link.title}</S.StyledNavLink>
+        <S.headerStyles.styledHamburgerIcon onClick={() => setShowMenu(!showMenu)} ><i class="fa-solid fa-bars"></i></S.headerStyles.styledHamburgerIcon>
+        <S.headerStyles.NavLinkWrapper showOnMobile={showMenu}>
+          {headerLinks.map((link) => (
+            <S.headerStyles.StyledNavLink className={pathname === link.title ? "active" : ""} key={link.title} to={link.href}>{link.title}</S.headerStyles.StyledNavLink>
           ))}
-        </S.NavLinkWrapper>
-      </S.NavbarWrapper>
+        </S.headerStyles.NavLinkWrapper>
+      </S.headerStyles.NavbarWrapper>
     )
   }
 
