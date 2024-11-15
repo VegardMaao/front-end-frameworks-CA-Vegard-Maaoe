@@ -37,6 +37,14 @@ export const NavLinkWrapper = styled.div`
     background: ${theme.color.offwhite};
     text-align: center;
     padding: 2rem 100vw;
+    
+        @media(${device.sm}){
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        justify-content: space-evenly;
+        }
+    
     }
 `;
 
@@ -49,6 +57,7 @@ export const StyledNavLink = styled(NavLink)`
     border-radius: 25px;
     &: last-child {
     margin-right: 20px;
+    margin-bottom: 0px;
     }
 
     &: hover {
@@ -75,11 +84,10 @@ export const styledHamburgerIcon = styled.div`
     display: none;
     position: absolute;
     right: 20px;
-    top: 21px;
+    top: 30px;
 
     i{
-        pointer: cursor;
-        font-size: 1.8rem;
+        font-size: 2.4rem;
     }
 
     @media(${device.sm}){
