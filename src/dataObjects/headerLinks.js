@@ -1,10 +1,11 @@
-export const headerLinks = [{
-    title: "Home",
+export const headerLinks = [
+  {
+    title: "Shop",
     href: "/"
   }, {
     title: "Contact",
     href: "/contact"
   },{
-    title: "Shop",
-    href: "/shop"
+    title: "About",
+    href: "/About"
   }]

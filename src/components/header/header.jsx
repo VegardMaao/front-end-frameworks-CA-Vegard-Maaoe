@@ -10,7 +10,6 @@ function Nav() {
   const [showCart, setShowCart] = useState(true);
   
   const {pathname} = useLocation();
-  console.log(pathname);
 
     return (
       <headerStyles.NavbarWrapper>

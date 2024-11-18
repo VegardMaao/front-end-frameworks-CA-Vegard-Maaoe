@@ -6,7 +6,6 @@ import {ShopItem, Thumbnail} from "../../App.styles";
 export default function ListAllItems() {
   const allItemsUrl = "https://v2.api.noroff.dev/online-shop";
   const {data, isLoading, isError} = useGetAPI(allItemsUrl);
-  const { pathname } = useLocation();
 
     if (isLoading) {
       return <div>Loading posts</div>;
@@ -18,7 +17,7 @@ export default function ListAllItems() {
 
     return <div>
         {data.map((item) => (
-        <Link key={item.id} to={`${pathname}/${item.id}`}>
+        <Link key={item.id} to={`shop/${item.id}`}>
           <ShopItem>
               <Thumbnail src={item.image.url} alt={item.image.alt}/>
               <h2>{item.title}</h2>
