@@ -1,5 +1,5 @@
 import { useGetAPI } from "api/index.js";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {ShopItem, Thumbnail} from "../../App.styles";
 
 
