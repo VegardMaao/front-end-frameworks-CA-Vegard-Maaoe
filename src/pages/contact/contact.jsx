@@ -21,7 +21,7 @@ export default function Contact() {
       console.log(data);
     }
 
-    return <div>
+    return <main>
         <Metadata title={"Contact"} description={"This is the contact page"} />
         <ContactForm onSubmit={handleSubmit(onFormSubmit)}>
           <h1>Send me a message</h1>
@@ -39,5 +39,5 @@ export default function Contact() {
           <p>{errors.message?.message}</p>
           <input type="submit"/>
         </ContactForm>
-    </div>
+    </main>
   }

@@ -23,6 +23,6 @@ export const ContactForm = styled.form`
     align-items: center;
     border: 2px solid black;
     max-width: 350px;
-    margin: auto;
+    margin: 50px auto;
     padding: 10px;
 `;
