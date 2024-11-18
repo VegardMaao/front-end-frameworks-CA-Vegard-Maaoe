@@ -17,7 +17,7 @@ function Nav() {
         <headerStyles.StyledHamburgerIcon onClick={() => setShowMenu(!showMenu)} dangerouslySetInnerHTML={{__html: '<i class="fa-solid fa-bars"></i>'}}></headerStyles.StyledHamburgerIcon>
         <headerStyles.NavLinkWrapper showOnMobile={showMenu}>
           {headerLinks.map((link) => (
-            <headerStyles.StyledNavLink className={pathname === link.title ? "active" : "" || pathname.includes("checkout") ? "inactive" : ""} key={link.title} to={link.href} >{link.title}</headerStyles.StyledNavLink>
+            <headerStyles.StyledNavLink className={pathname === link.title ? "active" : ""} key={link.title} to={link.href} >{link.title}</headerStyles.StyledNavLink>
           ))}
         </headerStyles.NavLinkWrapper>
         <headerStyles.CartIcon to="/shop/checkout" showCart={showCart} dangerouslySetInnerHTML={{__html: `<i class="fa-solid fa-cart-shopping"></i>`}}/> 
