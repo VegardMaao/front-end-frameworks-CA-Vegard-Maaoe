@@ -4,6 +4,7 @@ import {device} from "../../BreakPoints"
 import { NavLink } from "react-router-dom";
 
 export const NavbarWrapper = styled.nav`
+    max-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +32,7 @@ export const NavbarWrapper = styled.nav`
 
 export const NavLinkWrapper = styled.div`
     transition: 0.5s;
+    margin-left: auto;
     @media(${device.sm}){
     position: fixed;
     top: ${(props) => props.showOnMobile ? "0px" : "-600px"};
@@ -43,6 +45,7 @@ export const NavLinkWrapper = styled.div`
         flex-direction: column;
         height: 60vh;
         justify-content: space-evenly;
+        margin-left: none;
         }
     
     }
@@ -54,7 +57,7 @@ export const StyledNavLink = styled(NavLink)`
     color: ${theme.color.deepblue};
     margin-left: 2rem;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 15px;
     &: last-child {
     margin-right: 20px;
     margin-bottom: 0px;
@@ -75,12 +78,12 @@ export const StyledNavLink = styled(NavLink)`
 
 export const StyledLogo = styled.img`
     position: relative;
-    z-index: 1;
+    z-index: 100;
     width: 150px;
 `;  
 
 export const StyledHamburgerIcon = styled.div`
-    z-index: 1;
+    z-index: 100;
     display: none;
     position: absolute;
     right: 20px;
@@ -96,9 +99,9 @@ export const StyledHamburgerIcon = styled.div`
 `;
 
 export const CartIcon = styled(NavLink)`
-    z-index: 1;
+    z-index: 100;
     display: ${(props) => props.showCart ? "block" : "none"};
-    margin-left: auto;
+    margin-right: 20px;
 
     i{
     font-size: 2rem;

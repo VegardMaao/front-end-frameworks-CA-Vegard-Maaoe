@@ -12,13 +12,14 @@ function Nav() {
     return (
       <headerStyles.NavbarWrapper>
         <Link className="logoWrapper" to={"/"}><Logo/></Link>
-        <headerStyles.CartIcon to="/shop/checkout" showCart={showCart} dangerouslySetInnerHTML={{__html: `<i class="fa-solid fa-cart-shopping"></i>`}}/> 
+        {/* <headerStyles.CartIcon to="/shop/checkout" showCart={showCart} dangerouslySetInnerHTML={{__html: `<i class="fa-solid fa-cart-shopping"></i>`}}/>  */}
         <headerStyles.StyledHamburgerIcon onClick={() => setShowMenu(!showMenu)} dangerouslySetInnerHTML={{__html: '<i class="fa-solid fa-bars"></i>'}}></headerStyles.StyledHamburgerIcon>
         <headerStyles.NavLinkWrapper showOnMobile={showMenu}>
           {headerLinks.map((link) => (
             <headerStyles.StyledNavLink activeClassName="active" key={link.title} to={link.href} >{link.title}</headerStyles.StyledNavLink>
           ))}
         </headerStyles.NavLinkWrapper>
+        <headerStyles.CartIcon to="/shop/checkout" showCart={showCart} dangerouslySetInnerHTML={{__html: `<i class="fa-solid fa-cart-shopping"></i>`}}/> 
       </headerStyles.NavbarWrapper>
     )
   }

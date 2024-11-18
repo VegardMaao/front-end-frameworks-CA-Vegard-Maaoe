@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 350;
     color: ${theme.color.deepblue};
     scroll-behavior: smooth;
+    max-width: 100vw;
   }
 
   h1, h2, h3, h4, h5{
