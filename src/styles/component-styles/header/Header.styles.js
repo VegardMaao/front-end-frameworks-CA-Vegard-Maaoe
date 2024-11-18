@@ -23,6 +23,11 @@ export const NavbarWrapper = styled.nav`
         color: ${theme.color.orange};
     }
 
+    .inactive {
+        background: ${theme.color.offwhite};
+        color: ${theme.color.deepblue};
+    }
+
     @media(${device.sm}){
     flex-direction: column;
     padding: 1rem;
@@ -39,6 +44,8 @@ export const NavLinkWrapper = styled.div`
     background: ${theme.color.offwhite};
     text-align: center;
     padding: 2rem 100vw;
+
+    
     
         @media(${device.sm}){
         display: flex;
@@ -99,12 +106,22 @@ export const StyledHamburgerIcon = styled.div`
 `;
 
 export const CartIcon = styled(NavLink)`
+    transition: 0.3s;
     z-index: 100;
+    color: ${theme.color.deepblue};
     display: ${(props) => props.showCart ? "block" : "none"};
     margin-right: 20px;
-
+    border-radius: 15px;
+    
     i{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding: 10px;
+    color: inherit;
+    }
+
+    &: hover {
+        background: ${theme.color.deepblue};
+        color: ${theme.color.orange};
     }
 
     @media${device.sm}{

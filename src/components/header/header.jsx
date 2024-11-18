@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  Link } from "react-router-dom";
+import {  Link, useLocation } from "react-router-dom";
 import { headerLinks } from "dataObjects/headerLinks";
 import {headerStyles} from "styles";
 import { Logo } from "./Logo";
@@ -7,16 +7,18 @@ import { Logo } from "./Logo";
 function Nav() {
 
   const [showMenu, setShowMenu] = useState(false);
-  const [showCart, setShowCart] = useState(true); 
+  const [showCart, setShowCart] = useState(true);
+  
+  const {pathname} = useLocation();
+  console.log(pathname);
 
     return (
       <headerStyles.NavbarWrapper>
         <Link className="logoWrapper" to={"/"}><Logo/></Link>
-        {/* <headerStyles.CartIcon to="/shop/checkout" showCart={showCart} dangerouslySetInnerHTML={{__html: `<i class="fa-solid fa-cart-shopping"></i>`}}/>  */}
         <headerStyles.StyledHamburgerIcon onClick={() => setShowMenu(!showMenu)} dangerouslySetInnerHTML={{__html: '<i class="fa-solid fa-bars"></i>'}}></headerStyles.StyledHamburgerIcon>
         <headerStyles.NavLinkWrapper showOnMobile={showMenu}>
           {headerLinks.map((link) => (
-            <headerStyles.StyledNavLink activeClassName="active" key={link.title} to={link.href} >{link.title}</headerStyles.StyledNavLink>
+            <headerStyles.StyledNavLink className={pathname === link.title ? "active" : "" || pathname.includes("checkout") ? "inactive" : ""} key={link.title} to={link.href} >{link.title}</headerStyles.StyledNavLink>
           ))}
         </headerStyles.NavLinkWrapper>
         <headerStyles.CartIcon to="/shop/checkout" showCart={showCart} dangerouslySetInnerHTML={{__html: `<i class="fa-solid fa-cart-shopping"></i>`}}/> 
