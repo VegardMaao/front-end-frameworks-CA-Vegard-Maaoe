@@ -7,7 +7,7 @@ const allItemsUrl = "https://v2.api.noroff.dev/online-shop";
 export default function Shop() {
         return <main>
             <Metadata title="Shop" description="Shop"/>
-           <FeaturedItem />
-           <ListAllItems url={allItemsUrl} />
+            <FeaturedItem url={allItemsUrl}/>
+            <ListAllItems url={allItemsUrl} />
            </main>
 };
