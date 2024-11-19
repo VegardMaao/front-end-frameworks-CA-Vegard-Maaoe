@@ -1,11 +1,13 @@
 import {Metadata} from "components";
-import ShopAllItems from "components/shopAllItems/ShopAllItems.jsx"
-import { ShopHeroStory } from "components/shopHeroStory/ShopHeroStory";
+import { ListAllItems, FeaturedItem } from "../../components/index"
+
+const allItemsUrl = "https://v2.api.noroff.dev/online-shop";
+
 
 export default function Shop() {
         return <main>
             <Metadata title="Shop" description="Shop"/>
-           <ShopHeroStory />
-           <ShopAllItems/>
+           <FeaturedItem />
+           <ListAllItems url={allItemsUrl} />
            </main>
 };

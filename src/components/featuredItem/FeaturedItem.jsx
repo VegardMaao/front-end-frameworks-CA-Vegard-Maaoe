@@ -1,4 +1,4 @@
-export function ShopHeroStory(){
+export function FeaturedItem(){
     return <div>
         <div>
             <h1>Fetured item which will be dynamic</h1>

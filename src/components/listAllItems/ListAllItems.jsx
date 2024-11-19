@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import {ShopItem, Thumbnail} from "../../App.styles";
 
 
-export default function ListAllItems() {
-  const allItemsUrl = "https://v2.api.noroff.dev/online-shop";
-  const {data, isLoading, isError} = useGetAPI(allItemsUrl);
+export function ListAllItems({url}) {
+  
+  const {data, isLoading, isError} = useGetAPI(url);
 
     if (isLoading) {
       return <div>Loading posts</div>;
