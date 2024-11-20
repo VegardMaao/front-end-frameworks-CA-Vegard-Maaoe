@@ -3,5 +3,5 @@ import { device } from "../../BreakPoints";
 import { theme } from "../../theme";
 
 export const FeaturedItemWrapper = styled.div`
-    background: red;
+    background-image: url(${(props) => props.url}});
 `;
