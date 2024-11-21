@@ -24,3 +24,7 @@ export const FeaturedParagraph = styled.p`
     font-size: 1.1rem;
     max-width: 80vw;
 `;
+
+export const LineThrough = styled.span`
+    text-decoration: line-through;
+`;

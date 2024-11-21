@@ -1,4 +1,5 @@
 import { featuredItemStyles } from "styles";
+import { DisplayPrice } from "./displayPrice";
 import { Link } from "react-router-dom";
 
 export function DataToComponent({data}) {
@@ -21,7 +22,9 @@ export function DataToComponent({data}) {
 
     return <featuredItemStyles.FeaturedItemWrapper url={url}>
             <featuredItemStyles.FeaturedHeader>{title}</featuredItemStyles.FeaturedHeader>
-            <featuredItemStyles.FeaturedParagraph>{description}</featuredItemStyles.FeaturedParagraph>
-            <featuredItemStyles.FeaturedParagraph>{discountedPrice ? `On discount ${discountedPrice}` : price}</featuredItemStyles.FeaturedParagraph>
+                <featuredItemStyles.FeaturedParagraph>{description}</featuredItemStyles.FeaturedParagraph>
+                <featuredItemStyles.FeaturedParagraph>
+                    <DisplayPrice discountedPrice={discountedPrice} regularPrice={price}/>
+                </featuredItemStyles.FeaturedParagraph>
         </featuredItemStyles.FeaturedItemWrapper>
 }
