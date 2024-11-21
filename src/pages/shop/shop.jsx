@@ -8,6 +8,7 @@ export default function Shop() {
         return <main>
             <Metadata title="Shop" description="Shop"/>
             <FeaturedItem url={allItemsUrl}/>
+            <h2>Shop:</h2>
             <ListAllItems url={allItemsUrl} />
            </main>
 };
