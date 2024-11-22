@@ -17,13 +17,13 @@ export function ListAllItems({url}) {
 
     return <shopStyles.ShopWrapper>
         {data.map((item) => (
-          <shopStyles.ShopItem>
-            <Link key={item.id} to={`shop/${item.id}`}>
+          <shopStyles.ShopItem key={item.id}>
+            <Link to={`shop/${item.id}`}>
               <shopStyles.Thumbnail src={item.image.url} alt={item.image.alt}/>
             </Link>
             <shopStyles.ItemTitle>{item.title}</shopStyles.ItemTitle>
             <shopStyles.ItemDescription>{item.description}</shopStyles.ItemDescription>
-            <Link key={item.id} to={`shop/${item.id}`}>
+            <Link to={`shop/${item.id}`}>
                 <buttons.ButtonComponent colors="inverted" size="small">See product</buttons.ButtonComponent>
             </Link>
           </shopStyles.ShopItem>
