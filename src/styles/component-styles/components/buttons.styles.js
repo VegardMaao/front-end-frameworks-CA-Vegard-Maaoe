@@ -13,7 +13,7 @@ export const ButtonComponent = styled.button`
         :hover {
             background-color: ${({ colors }) => hoverBgColors[colors]};
             color: ${({ colors }) => hoverFontColors[colors]};
-            border: 2px solid ${({colors}) => hoverFontColors[colors]};
+            border: 1px solid ${({colors}) => hoverFontColors[colors]};
             cursor: pointer;
         }
 `;
