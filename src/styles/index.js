@@ -4,3 +4,4 @@ export * as footerStyles from "./component-styles/footer/footer.styles";
 export * from "./theme"
 export * from "./BreakPoints";
 export * as featuredItemStyles from "./component-styles/featuredItem/featuredItem.styles"
+export * as buttons from "./component-styles/components/buttons.styles"

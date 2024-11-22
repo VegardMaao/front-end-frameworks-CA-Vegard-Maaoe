@@ -1,5 +1,6 @@
 import { featuredItemStyles } from "styles";
 import { DisplayPrice } from "./displayPrice";
+import { buttons } from "styles";
 import { Link } from "react-router-dom";
 
 export function DataToComponent({data}) {
@@ -16,15 +17,18 @@ export function DataToComponent({data}) {
 
     const sortedArr = data.sort(sortByReviews);
     let topResult = sortedArr[0];
-    const {description, discountedPrice, image, price, rating, reviews, tags, title } = topResult || {};
+    const {description, discountedPrice, id, image, price, rating, reviews, tags, title } = topResult || {};
     
     const {url, alt} = image || {};
 
-    return <featuredItemStyles.FeaturedItemWrapper url={url}>
+    return <featuredItemStyles.FeaturedItemWrapper url={url} alt={alt}>
             <featuredItemStyles.FeaturedHeader>{title}</featuredItemStyles.FeaturedHeader>
                 <featuredItemStyles.FeaturedParagraph>{description}</featuredItemStyles.FeaturedParagraph>
                 <featuredItemStyles.FeaturedParagraph>
                     <DisplayPrice discountedPrice={discountedPrice} regularPrice={price}/>
                 </featuredItemStyles.FeaturedParagraph>
+                <Link to={`/shop/${id}`}>
+                    <buttons.ButtonComponent type="primary">Buy now</buttons.ButtonComponent>
+                </Link>
         </featuredItemStyles.FeaturedItemWrapper>
 }
