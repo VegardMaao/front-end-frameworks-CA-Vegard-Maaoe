@@ -24,9 +24,7 @@ export function DataToComponent({data}) {
     return <featuredItemStyles.FeaturedItemWrapper url={url} alt={alt}>
             <featuredItemStyles.FeaturedHeader>{title}</featuredItemStyles.FeaturedHeader>
                 <featuredItemStyles.FeaturedParagraph>{description}</featuredItemStyles.FeaturedParagraph>
-                <featuredItemStyles.FeaturedParagraph>
                     <DisplayPrice discountedPrice={discountedPrice} regularPrice={price}/>
-                </featuredItemStyles.FeaturedParagraph>
                 <Link to={`/shop/${id}`}>
                     <buttons.ButtonComponent colors="primary" size="big">Buy now</buttons.ButtonComponent>
                 </Link>

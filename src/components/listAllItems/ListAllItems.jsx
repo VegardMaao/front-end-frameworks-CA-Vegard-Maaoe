@@ -1,6 +1,6 @@
 import { useGetAPI } from "api/index.js";
 import { Link } from "react-router-dom";
-import { buttons, shopStyles } from "styles";
+import { buttons, shopStyles, loadingStyle } from "styles";
 
 
 export function ListAllItems({url}) {
@@ -8,7 +8,7 @@ export function ListAllItems({url}) {
   const {data, isLoading, isError} = useGetAPI(url);
 
     if (isLoading) {
-      return <div>Loading posts</div>;
+      return <loadingStyle.Loader />;
     }
         
     if (isError) {

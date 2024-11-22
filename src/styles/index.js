@@ -7,3 +7,4 @@ export * as featuredItemStyles from "./component-styles/components/shopElements/
 export * as buttons from "./component-styles/components/Buttons.styles"
 export * as contactForm from "./component-styles/components/forms/ContactForm.Styles"
 export * as shopStyles from "./component-styles/components/shopElements/ShopListings.styles"
+export * as loadingStyle from "./component-styles/components/Loader.styles"

@@ -1,12 +1,13 @@
 import { useGetAPI } from "api/index.js";
 import { DataToComponent } from "./subComponents/dataToComponent";
+import { loadingStyle } from "styles";
 
 export function FeaturedItem({url}){
 
     const {data, isLoading, isError} = useGetAPI(url);
 
     if (isLoading) {
-      return <div>Loading post</div>;
+      return <loadingStyle.Loader />;
     }
 
     if (isError) {
