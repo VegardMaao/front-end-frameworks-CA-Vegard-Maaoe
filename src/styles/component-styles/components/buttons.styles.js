@@ -7,8 +7,8 @@ export const ButtonComponent = styled.button`
     border: 1px solid ${({colors}) => fontColors[colors]};
     border-radius: 30px;
     color: ${({colors}) => fontColors[colors]};
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: ${({size}) => fontSizes[size]};;
+    font-weight: 600;
 
         :hover {
             background-color: ${({ colors }) => hoverBgColors[colors]};
@@ -17,6 +17,11 @@ export const ButtonComponent = styled.button`
             cursor: pointer;
         }
 `;
+
+const fontSizes = {
+  big: "1.3rem",
+  small: "0.9rem"
+}
 
 const fontColors = {
   primary: theme.color.orange,

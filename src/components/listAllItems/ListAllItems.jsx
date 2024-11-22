@@ -24,7 +24,7 @@ export function ListAllItems({url}) {
             <shopStyles.ItemTitle>{item.title}</shopStyles.ItemTitle>
             <shopStyles.ItemDescription>{item.description}</shopStyles.ItemDescription>
             <Link key={item.id} to={`shop/${item.id}`}>
-                <buttons.ButtonComponent colors="inverted">See product</buttons.ButtonComponent>
+                <buttons.ButtonComponent colors="inverted" size="small">See product</buttons.ButtonComponent>
             </Link>
           </shopStyles.ShopItem>
       ))}
