@@ -3,5 +3,7 @@ export * as headerStyles from "./component-styles/header/Header.styles";
 export * as footerStyles from "./component-styles/footer/footer.styles";
 export * from "./theme"
 export * from "./BreakPoints";
-export * as featuredItemStyles from "./component-styles/featuredItem/featuredItem.styles"
-export * as buttons from "./component-styles/components/buttons.styles"
+export * as featuredItemStyles from "./component-styles/components/shopElements/FeaturedItem.styles"
+export * as buttons from "./component-styles/components/Buttons.styles"
+export * as contactForm from "./component-styles/components/forms/ContactForm.Styles"
+export * as shopStyles from "./component-styles/components/shopElements/ShopListings.styles"

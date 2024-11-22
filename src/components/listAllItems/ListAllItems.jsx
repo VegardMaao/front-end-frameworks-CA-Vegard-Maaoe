@@ -1,7 +1,6 @@
 import { useGetAPI } from "api/index.js";
 import { Link } from "react-router-dom";
-import {ShopItem, Thumbnail} from "../../App.styles";
-import { buttons } from "styles";
+import { buttons, shopStyles } from "styles";
 
 
 export function ListAllItems({url}) {
@@ -16,18 +15,18 @@ export function ListAllItems({url}) {
       return <div>Error loading data</div>;
     }
 
-    return <div>
+    return <shopStyles.ShopWrapper>
         {data.map((item) => (
-          <ShopItem>
+          <shopStyles.ShopItem>
             <Link key={item.id} to={`shop/${item.id}`}>
-              <Thumbnail src={item.image.url} alt={item.image.alt}/>
+              <shopStyles.Thumbnail src={item.image.url} alt={item.image.alt}/>
             </Link>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
+            <shopStyles.ItemTitle>{item.title}</shopStyles.ItemTitle>
+            <shopStyles.ItemDescription>{item.description}</shopStyles.ItemDescription>
             <Link key={item.id} to={`shop/${item.id}`}>
-                <buttons.ButtonComponent type="inverted">See product</buttons.ButtonComponent>
+                <buttons.ButtonComponent colors="inverted">See product</buttons.ButtonComponent>
             </Link>
-          </ShopItem>
+          </shopStyles.ShopItem>
       ))}
-    </div>
+    </shopStyles.ShopWrapper>
 }

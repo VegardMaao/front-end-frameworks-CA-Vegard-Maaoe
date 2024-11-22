@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useForm } from "react-hook-form";
-import { ContactForm } from "../../App.styles";
+import { contactForm}  from 'styles';
 import {Metadata} from 'components';
 
 const emailRegex = `^[^\s@]+@[^\s@]+\.[^\s@]+$`;
@@ -23,7 +23,7 @@ export default function Contact() {
 
     return <main>
         <Metadata title={"Contact"} description={"This is the contact page"} />
-        <ContactForm onSubmit={handleSubmit(onFormSubmit)}>
+        <contactForm.ContactForm onSubmit={handleSubmit(onFormSubmit)}>
           <h1>Send me a message</h1>
           <label htmlFor="firstName">First Name:</label>
           <input {...register("firstName")}/>
@@ -38,6 +38,6 @@ export default function Contact() {
           <textarea {...register("message")}/>
           <p>{errors.message?.message}</p>
           <input type="submit"/>
-        </ContactForm>
+        </contactForm.ContactForm>
     </main>
   }

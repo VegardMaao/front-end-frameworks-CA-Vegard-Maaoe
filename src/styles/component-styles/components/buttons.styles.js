@@ -2,18 +2,18 @@ import styled from "styled-components";
 import { theme } from "../../theme";
 
 export const ButtonComponent = styled.button`
-    background-color: ${({ type }) => backgroundColors[type]};
+    background-color: ${({ colors }) => backgroundColors[colors]};
     padding: 15px;
-    border: 1px solid ${({type}) => fontColors[type]};
+    border: 1px solid ${({colors}) => fontColors[colors]};
     border-radius: 30px;
-    color: ${({type}) => fontColors[type]};
+    color: ${({colors}) => fontColors[colors]};
     font-size: 1.1rem;
     font-weight: 500;
 
         :hover {
-            background-color: ${({ type }) => hoverBgColors[type]};
-            color: ${({ type }) => hoverFontColors[type]};
-            border: 2px solid ${({type}) => hoverFontColors[type]};
+            background-color: ${({ colors }) => hoverBgColors[colors]};
+            color: ${({ colors }) => hoverFontColors[colors]};
+            border: 2px solid ${({colors}) => hoverFontColors[colors]};
             cursor: pointer;
         }
 `;
