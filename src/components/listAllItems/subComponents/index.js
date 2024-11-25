@@ -1,1 +1,2 @@
-export * from "./viewItems"
+export * from "./viewItems";
+export * from "./searchbar"

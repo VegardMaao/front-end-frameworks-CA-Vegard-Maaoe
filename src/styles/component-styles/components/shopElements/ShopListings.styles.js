@@ -8,10 +8,6 @@ export const ShopWrapper = styled.div`
     align-items: center;
 `;
 
-export const SearchInp = styled.input`
-
-`;
-
 export const AllItemDiv = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;

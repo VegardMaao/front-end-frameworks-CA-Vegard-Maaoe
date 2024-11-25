@@ -1,6 +1,6 @@
 import { useGetAPI } from "api/index.js";
 import { loadingStyle, shopStyles } from "styles";
-import { ViewItems } from "./subComponents/index";
+import { ViewItems, Searchbar } from "./subComponents/index";
 
 export function ListAllItems({url}) {
   
@@ -16,7 +16,7 @@ export function ListAllItems({url}) {
 
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
-      <shopStyles.SearchInp type="text"/> 
+        <Searchbar />
         <ViewItems data={data} />
     </shopStyles.ShopWrapper>
 }
