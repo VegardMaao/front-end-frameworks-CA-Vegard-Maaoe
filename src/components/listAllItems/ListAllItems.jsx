@@ -6,6 +6,8 @@ export function ListAllItems({url}) {
   
   const {data, isLoading, isError} = useGetAPI(url);
 
+  let itemsArray = data || [];
+
     if (isLoading) {
       return <loadingStyle.Loader />;
     }
@@ -17,6 +19,6 @@ export function ListAllItems({url}) {
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
         <Searchbar />
-        <ViewItems data={data} />
+        <ViewItems data={itemsArray} />
     </shopStyles.ShopWrapper>
 }
