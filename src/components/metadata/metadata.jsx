@@ -5,9 +5,5 @@ export function Metadata({title, description} ) {
     <meta name="author" content="Vegard Maaø" />
     <meta name="description" content={`${description}`} />
     <title>{`${title} | Online Shop`}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"></link>
-    <script src="https://kit.fontawesome.com/efafec28fb.js" crossorigin="anonymous"></script>
     </Helmet>
 }
