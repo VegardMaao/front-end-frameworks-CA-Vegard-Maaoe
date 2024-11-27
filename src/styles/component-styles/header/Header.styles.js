@@ -35,7 +35,7 @@ export const NavLinkWrapper = styled.div`
     margin-left: auto;
     @media(${device.sm}){
     position: fixed;
-    top: ${(props) => props.showOnMobile ? "0px" : "-600px"};
+    top: ${(props) => props.showOnMobile ? "0px" : "-100vh"};
     background: ${theme.color.offwhite};
     text-align: center;
     padding: 2rem 100vw;
