@@ -18,7 +18,7 @@ export function ListAllItems({url}) {
 
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
-        <Searchbar />
+        <Searchbar data={itemsArray}/>
         <ViewItems data={itemsArray} />
     </shopStyles.ShopWrapper>
 }
