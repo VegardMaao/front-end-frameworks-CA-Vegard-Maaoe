@@ -1,5 +1,5 @@
 import {Metadata} from "components";
-import { ListAllItems, FeaturedItem } from "../../components/index"
+import { ListAllItems, FeaturedItem } from "components";
 
 const allItemsUrl = "https://v2.api.noroff.dev/online-shop";
 
