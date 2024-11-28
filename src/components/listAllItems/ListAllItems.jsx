@@ -21,6 +21,6 @@ export function ListAllItems({url}) {
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
         <Searchbar data={itemsArray} setDataArray={setDataArray} dataArray={dataArray}/>
-        <ViewItems data={!dataArray.length? itemsArray : dataArray} />
+        <ViewItems data={dataArray} />
     </shopStyles.ShopWrapper>
 }
