@@ -6,8 +6,7 @@ export function LogInp(e, params){
     const filtered = data.filter(item => Object.values(item).some(val => typeof val === "string" && val.toLowerCase().includes(lowerCaseSearchQuery)));
 
     if (filtered.length === 0) {
-        console.log("hello")
-        
+        setDataArray([]);
     }
 
     setDataArray(filtered);
