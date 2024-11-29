@@ -9,3 +9,4 @@ export * as contactForm from "./component-styles/components/forms/ContactForm.St
 export * as shopStyles from "./component-styles/components/shopElements/ShopListings.styles";
 export * as loadingStyle from "./component-styles/components/Loader.styles";
 export * as searchBarStyles from "./component-styles/components/shopElements/Searchbar.styles";
+export * as singleItemStyles from "./component-styles/components/shopElements/SingleItem.styles";

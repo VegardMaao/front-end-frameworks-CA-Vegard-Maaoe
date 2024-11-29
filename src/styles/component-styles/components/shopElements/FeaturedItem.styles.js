@@ -20,11 +20,11 @@ export const FeaturedItemWrapper = styled.div`
 
 export const FeaturedHeader = styled.h1`
     margin: 0px;
-    color: ${theme.color.white};
+    color: ${({colors}) => fontColors[colors]};
 `;
 
 export const FeaturedParagraph = styled.p`
-    color: ${theme.color.white};
+    color: ${({colors}) => fontColors[colors]};
     text-align: center;
     font-size: 1.1rem;
     max-width: 80vw;
@@ -33,3 +33,8 @@ export const FeaturedParagraph = styled.p`
 export const LineThrough = styled.span`
     text-decoration: line-through;
 `;
+
+const fontColors = {
+    white: theme.color.white,
+    deepblue: theme.color.deepblue
+}

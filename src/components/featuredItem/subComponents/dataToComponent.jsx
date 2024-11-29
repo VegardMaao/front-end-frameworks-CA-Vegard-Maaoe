@@ -17,13 +17,13 @@ export function DataToComponent({data}) {
 
     const sortedArr = data.sort(sortByReviews);
     let topResult = sortedArr[0];
-    const {description, discountedPrice, id, image, price, rating, reviews, tags, title } = topResult || {};
+    const {description, discountedPrice, id, image, price, title } = topResult || {};
     
     const {url, alt} = image || {};
 
     return <featuredItemStyles.FeaturedItemWrapper url={url} alt={alt}>
-            <featuredItemStyles.FeaturedHeader>{title}</featuredItemStyles.FeaturedHeader>
-                <featuredItemStyles.FeaturedParagraph>{description}</featuredItemStyles.FeaturedParagraph>
+            <featuredItemStyles.FeaturedHeader colors="white">{title}</featuredItemStyles.FeaturedHeader>
+                <featuredItemStyles.FeaturedParagraph colors="white">{description}</featuredItemStyles.FeaturedParagraph>
                     <DisplayPrice discountedPrice={discountedPrice} regularPrice={price}/>
                 <Link to={`/shop/${id}`}>
                     <buttons.ButtonComponent colors="primary" size="big">Buy now</buttons.ButtonComponent>
