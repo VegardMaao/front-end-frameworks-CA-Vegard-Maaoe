@@ -9,15 +9,9 @@ export function sortByReviews(a, b){
 }
 
 export function sortByPrice(a, b) {
-    if (a.discounteddiscountedPrice && b.discounteddiscountedPrice) {
-        if (a.discountedPrice > b.discountedPrice ) {
-            return -1;
-        }
-        if (a.discountedPrice < b.discountedPrice){
-            return 1;
-        }
-        return 0;
-    } else {
+
+
+    // NEEDS WORK; Need this to take both discounted and regular price into consideration
 
         if (a.price > b.price ) {
             return -1;
@@ -26,7 +20,5 @@ export function sortByPrice(a, b) {
             return 1;
         }
         return 0;
-    }
 
-    
 }
