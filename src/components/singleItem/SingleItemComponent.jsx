@@ -4,8 +4,10 @@ import { singleItemStyles } from "styles";
 import { DisplayPrice } from "../featuredItem/subComponents/displayPrice";
 import { buttons } from "styles";
 
-export function DisplaySingleItem({itemURL}) {
-    
+export function DisplaySingleItem(params) {
+
+    const {itemURL, setTitle, setDescription} = params;
+
     const {data, isLoading, isError} = useGetAPI(itemURL);
 
     let itemData = data || [];
@@ -18,10 +20,11 @@ export function DisplaySingleItem({itemURL}) {
         return <div>Error loading data</div>;
       }
 
-      console.log(itemData)
-
       const {description, discountedPrice, id, image, price, rating, reviews, title } = itemData;
       const {url, alt} = image || {};
+
+      setTitle(title);
+      setDescription(description);
 
     return <singleItemStyles.SingleItemWrapper>
         <singleItemStyles.SingleItemImage src={url} alt={alt} />
