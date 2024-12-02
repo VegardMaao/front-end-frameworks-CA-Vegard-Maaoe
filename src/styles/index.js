@@ -10,3 +10,4 @@ export * as shopStyles from "./component-styles/components/shopElements/ShopList
 export * as loadingStyle from "./component-styles/components/Loader.styles";
 export * as searchBarStyles from "./component-styles/components/shopElements/Searchbar.styles";
 export * as singleItemStyles from "./component-styles/components/shopElements/SingleItem.styles";
+export * as sortInputStyles from "./component-styles/components/shopElements/SortInput.styles"

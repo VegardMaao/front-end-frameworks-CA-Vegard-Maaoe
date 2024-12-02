@@ -8,6 +8,14 @@ export const ShopWrapper = styled.div`
     align-items: center;
 `;
 
+export const SearchAndSort = styled.div`
+    display: grid;
+    width: 500px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+`;
+
 export const AllItemDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

@@ -6,10 +6,10 @@ export function Searchbar(params){
     const {data, setDataArray} = params;
     useEffect(() => {
     setDataArray(data);
-    }, [])
+    }, []);
     
     return <searchBarStyles.SearchBar>
-    <i className="fa-solid fa-magnifying-glass"></i>
-    <searchBarStyles.SearchInp type="text" placeholder="Search" onKeyUp={(e)=>{SearchFunc(e, params)}}/> 
+    <label htmlFor="searchInp"><i className="fa-solid fa-magnifying-glass"></i></label>
+    <searchBarStyles.SearchInp type="text" name="searchInp" id="searchInp" placeholder="Search" onKeyUp={(e)=>{SearchFunc(e, params)}}/> 
     </searchBarStyles.SearchBar>
 }

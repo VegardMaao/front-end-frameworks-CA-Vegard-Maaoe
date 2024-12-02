@@ -2,19 +2,11 @@ import { featuredItemStyles } from "styles";
 import { DisplayPrice } from "./displayPrice";
 import { buttons } from "styles";
 import { Link } from "react-router-dom";
+import { sortByReviews } from "../../sortingArray/sortingArray";
 
 export function DataToComponent({data}) {
 
-    function sortByReviews(a, b){
-        if (a.reviews.length > b.reviews.length || a.rating > b.rating) {
-            return -1;
-        }
-        if (a.reviews.length < b.reviews.length || a.rating < b.rating){
-            return 1;
-        }
-        return 0;
-    }
-
+    
     const sortedArr = data.sort(sortByReviews);
     let topResult = sortedArr[0];
     const {description, discountedPrice, id, image, price, title } = topResult || {};

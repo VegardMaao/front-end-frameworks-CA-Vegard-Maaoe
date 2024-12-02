@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useGetAPI } from "api/index.js";
 import { loadingStyle, shopStyles } from "styles";
-import { ViewItems, Searchbar } from "./subComponents/index";
+import { ViewItems, Searchbar, SortInp } from "./subComponents/index";
 
 export function ListAllItems({url}) {
   const [dataArray, setDataArray] = useState([]);
@@ -20,7 +20,10 @@ export function ListAllItems({url}) {
 
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
-        <Searchbar data={itemsArray} setDataArray={setDataArray}/>
+        <shopStyles.SearchAndSort>
+          <Searchbar data={itemsArray} setDataArray={setDataArray}/>
+          <SortInp data={itemsArray} setDataArray={setDataArray}/>
+        </shopStyles.SearchAndSort>
         <ViewItems data={dataArray} />
     </shopStyles.ShopWrapper>
 }
