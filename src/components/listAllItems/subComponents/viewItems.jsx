@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { buttons, shopStyles } from "styles";
+import { DisplayPrice } from "../../featuredItem/subComponents/displayPrice";
 
 export function ViewItems({data}){
       return <shopStyles.AllItemDiv>
@@ -10,6 +11,7 @@ export function ViewItems({data}){
             </Link>
             <shopStyles.ItemTitle>{item.title}</shopStyles.ItemTitle>
             <shopStyles.ItemDescription>{item.description}</shopStyles.ItemDescription>
+            <DisplayPrice discountedPrice={item.discountedPrice} regularPrice={item.price}/>
             <Link to={`shop/${item.id}`}>
                 <buttons.ButtonComponent colors="inverted" size="small">See product</buttons.ButtonComponent>
             </Link>
