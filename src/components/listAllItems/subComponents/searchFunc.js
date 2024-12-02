@@ -1,4 +1,4 @@
-export function LogInp(e, params){
+export function SearchFunc(e, params){
     const {data, setDataArray} = params;
     const searchQuery = e.target.value;
     const lowerCaseSearchQuery = searchQuery.toLowerCase();
