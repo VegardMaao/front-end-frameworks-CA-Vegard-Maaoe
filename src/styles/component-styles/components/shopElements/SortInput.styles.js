@@ -9,7 +9,7 @@ export const InputWrapper = styled.div`
 `;
 
 export const SelectElem = styled.select`
-    width: 90%;
+    width: 99%;
     border: 0px;
     padding: 0px;
     margin: 0px;

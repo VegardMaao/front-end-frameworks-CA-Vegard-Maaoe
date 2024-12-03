@@ -1,13 +1,17 @@
 export function SearchFunc(e, params){
-    const {data, setDataArray} = params;
+    const {originalArray, newData, setDataArray} = params;
     const searchQuery = e.target.value;
     const lowerCaseSearchQuery = searchQuery.toLowerCase();
 
-    const filtered = data.filter(item => Object.values(item).some(val => typeof val === "string" && val.toLowerCase().includes(lowerCaseSearchQuery)));
-
-    if (filtered.length === 0) {
-        setDataArray([]);
+    if(!searchQuery){
+        return setDataArray(originalArray);
     }
 
-    setDataArray(filtered);
+    const filtered = newData.filter(item => Object.values(item).some(val => typeof val === "string" && val.toLowerCase().includes(lowerCaseSearchQuery)));
+
+    if (filtered.length === 0) {
+        return setDataArray([]);
+    }
+
+    return setDataArray(filtered);
 }

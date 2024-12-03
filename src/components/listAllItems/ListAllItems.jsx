@@ -4,11 +4,10 @@ import { loadingStyle, shopStyles } from "styles";
 import { ViewItems, Searchbar, SortInp } from "./subComponents/index";
 
 export function ListAllItems({url}) {
-  const [dataArray, setDataArray] = useState([]);
-  
   const {data, isLoading, isError} = useGetAPI(url);
+  const [dataArray, setDataArray] = useState([]);
+  let originalArray = data || [];
 
-  let itemsArray = data || [];
 
     if (isLoading) {
       return <loadingStyle.Loader />;
@@ -21,9 +20,9 @@ export function ListAllItems({url}) {
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
         <shopStyles.SearchAndSort>
-          <Searchbar data={dataArray} setDataArray={setDataArray}/>
-          <SortInp data={itemsArray} setDataArray={setDataArray}/>
+          <Searchbar originalArray={originalArray} newData={dataArray} setDataArray={setDataArray}/>
+          <SortInp data={dataArray} setDataArray={setDataArray}/>
         </shopStyles.SearchAndSort>
-        <ViewItems data={dataArray} />
+        <ViewItems originalArray={originalArray} newData={dataArray} setDataArray={setDataArray}/>
     </shopStyles.ShopWrapper>
 }

@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { buttons, shopStyles } from "styles";
 import { DisplayPrice } from "../../featuredItem/subComponents/displayPrice";
+import { useEffect } from "react";
 
-export function ViewItems({data}){
+export function ViewItems(params){
+  const {originalArray, newData, setDataArray} = params;
+
+  useEffect(()=>{
+    setDataArray(originalArray);
+  },[])
+
       return <shopStyles.AllItemDiv>
-        {data.map((item) => (
+        {newData.map((item) => (
           <shopStyles.ShopItem key={item.id}>
             <Link to={`shop/${item.id}`}>
               <shopStyles.Thumbnail src={item.image.url} alt={item.image.alt}/>
