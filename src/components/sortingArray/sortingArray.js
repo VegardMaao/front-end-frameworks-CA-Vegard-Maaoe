@@ -10,9 +10,6 @@ export function sortByReviews(a, b){
 
 export function sortByPrice(a, b) {
 
-
-    // NEEDS WORK; Need this to take both discounted and regular price into consideration
-
         if (a.price > b.price ) {
             return -1;
         }

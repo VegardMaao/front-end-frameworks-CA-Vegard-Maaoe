@@ -10,8 +10,9 @@ export const ShopWrapper = styled.div`
 
 export const SearchAndSort = styled.div`
     display: grid;
-    width: 500px;
-    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    height: 125px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     align-items: center;
 `;
