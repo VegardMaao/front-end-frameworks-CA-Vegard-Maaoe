@@ -28,7 +28,7 @@ export const AllItemDiv = styled.div`
 
 export const ShopItem = styled.div`
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     border: 2px solid black;
     width: 300px;
     height: 400px;
@@ -54,4 +54,6 @@ export const ItemTitle = styled.h2`
 
 export const ItemDescription = styled.p`
     max-width: 75%;
+    max-height: 50px;
+    overflow: hidden;
 `;

@@ -8,14 +8,22 @@ export function sortByReviews(a, b){
     return 0;
 }
 
-export function sortByPrice(a, b) {
+export function sortByHighPrice(a, b) {
+    if (a.discountedPrice > b.discountedPrice) {
+        return -1;
+    }
+    if (a.discountedPrice < b.discountedPrice){
+        return 1;
+    }
+    return 0;
+}
 
-        if (a.price > b.price ) {
-            return -1;
-        }
-        if (a.price < b.price){
-            return 1;
-        }
-        return 0;
-
+export function sortByLowPrice(a, b) {
+    if (a.discountedPrice > b.discountedPrice) {
+        return 1;
+    }
+    if (a.discountedPrice < b.discountedPrice){
+        return -1;
+    }
+    return 0;
 }

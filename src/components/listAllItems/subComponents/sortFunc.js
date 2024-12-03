@@ -16,23 +16,17 @@ export function sortFunc(e, params) {
             break;
 
         case "expensive":
-            sortedArr = [].concat(data).sort(sortings.sortByPrice);
+            sortedArr = [].concat(data).sort(sortings.sortByHighPrice);
             setDataArray(sortedArr);
             break;
 
         case "cheap":
-            console.log("cheap");
-            break;
-        
-        case "newest":
-            console.log("new")
-            break;
-
-        case "oldest":
-            console.log("old")
+            sortedArr = [].concat(data).sort(sortings.sortByLowPrice);
+            setDataArray(sortedArr);
             break;
 
         default:
+            setDataArray(data);
             break;
     }
 }
