@@ -1,16 +1,17 @@
 import { featuredItemStyles } from "styles";
 import { useParams } from "react-router-dom";
 
-export function DisplayPrice(priceInfo) {
+export function DisplayPrice(params) {
     const { id } = useParams();
-    const {discountedPrice, regularPrice} = priceInfo;
-    if (discountedPrice) {
-        return <featuredItemStyles.FeaturedParagraph colors={!id ? "white" : "deepblue"}>
+    const {color, discountedPrice, regularPrice} = params;
+    console.log(color)
+    if (discountedPrice && discountedPrice != regularPrice) {
+        return <featuredItemStyles.FeaturedParagraph colors={color}>
             <featuredItemStyles.LineThrough>{regularPrice}</featuredItemStyles.LineThrough>
             {` On sale! ${discountedPrice}`}
         </featuredItemStyles.FeaturedParagraph>
     } else {
-        return <featuredItemStyles.FeaturedParagraph colors={!id ? "white" : "deepblue"}>
+        return <featuredItemStyles.FeaturedParagraph colors={color}>
             {regularPrice}
         </featuredItemStyles.FeaturedParagraph>
     }

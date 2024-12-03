@@ -30,7 +30,7 @@ export function DisplaySingleItem(params) {
         <singleItemStyles.SingleItemImage src={url} alt={alt} />
         <singleItemStyles.SingleItemHeading>{title}</singleItemStyles.SingleItemHeading>
         <singleItemStyles.SingleIemParagraph>{description}</singleItemStyles.SingleIemParagraph>
-        <DisplayPrice discountedPrice={discountedPrice} regularPrice={price}/>
+        <DisplayPrice color="deepblue" discountedPrice={discountedPrice} regularPrice={price}/>
 
         <buttons.ButtonComponent colors="primary" size="big">Buy now</buttons.ButtonComponent>
 
