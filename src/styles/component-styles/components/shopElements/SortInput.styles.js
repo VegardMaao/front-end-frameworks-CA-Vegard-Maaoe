@@ -15,4 +15,5 @@ export const SelectElem = styled.select`
     margin: 0px;
     outline: none;
     font-size: 1rem;
+    background: inherit; 
 `;
