@@ -5,7 +5,8 @@ import { ViewItems, Searchbar, SortInp } from "./subComponents/index";
 
 export function ListAllItems({url}) {
   const {data, isLoading, isError} = useGetAPI(url);
-  const [dataArray, setDataArray] = useState([]);
+  const [output, setOutput] = useState([]);
+  const [sortedArray, setSortedArray] = useState([]);
   let originalArray = data || [];
 
 
@@ -20,9 +21,9 @@ export function ListAllItems({url}) {
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
         <shopStyles.SearchAndSort>
-          <Searchbar originalArray={originalArray} newData={dataArray} setDataArray={setDataArray}/>
-          <SortInp data={dataArray} setDataArray={setDataArray}/>
+          <Searchbar sortedData={sortedArray} setOutput={setOutput} />
+          <SortInp output={output} setOutput={setOutput} setSortedArray={setSortedArray}/>
         </shopStyles.SearchAndSort>
-        <ViewItems originalArray={originalArray} newData={dataArray} setDataArray={setDataArray}/>
+        <ViewItems originalArray={originalArray} output={output} setOutput={setOutput} setSortedArray={setSortedArray}/>
     </shopStyles.ShopWrapper>
 }

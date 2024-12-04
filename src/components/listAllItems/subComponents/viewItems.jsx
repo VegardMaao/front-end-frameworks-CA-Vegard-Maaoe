@@ -4,14 +4,15 @@ import { DisplayPrice } from "../../featuredItem/subComponents/displayPrice";
 import { useEffect } from "react";
 
 export function ViewItems(params){
-  const {originalArray, newData, setDataArray} = params;
+  const {originalArray, output, setOutput, setSortedArray} = params;
 
   useEffect(()=>{
-    setDataArray(originalArray);
+    setOutput(originalArray);
+    setSortedArray(originalArray);
   },[])
 
       return <shopStyles.AllItemDiv>
-        {newData.map((item) => (
+        {output.map((item) => (
           <shopStyles.ShopItem key={item.id}>
             <Link to={`shop/${item.id}`}>
               <shopStyles.Thumbnail src={item.image.url} alt={item.image.alt}/>
