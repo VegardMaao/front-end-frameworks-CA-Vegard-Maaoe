@@ -5,7 +5,7 @@ export const InputWrapper = styled.div`
     border: 2px solid ${theme.color.deepblue};
     border-radius: 25px;
     padding: 10px;
-    width: 75%;
+    width: 200px;
 `;
 
 export const SelectElem = styled.select`

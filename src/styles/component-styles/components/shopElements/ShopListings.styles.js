@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../BreakPoints";
 
 export const ShopWrapper = styled.div`
     margin: auto;
@@ -9,12 +10,15 @@ export const ShopWrapper = styled.div`
 `;
 
 export const SearchAndSort = styled.div`
-    display: grid;
-    width: 75%;
+    display: flex;
+    width: 600px;
     height: 125px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    justify-items: center;
+    justify-content: space-around;
     align-items: center;
+
+    @media${device.sm}{
+    flex-direction: column;
+    }
 `;
 
 export const AllItemDiv = styled.div`

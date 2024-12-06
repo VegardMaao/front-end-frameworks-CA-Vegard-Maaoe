@@ -5,6 +5,7 @@ export const SearchBar = styled.div`
     border: 2px solid ${theme.color.deepblue};
     border-radius: 25px;
     padding: 10px;
+    width: 200px;
 
     i{
     font-size: 1.1rem;
@@ -19,6 +20,7 @@ export const SearchInp = styled.input`
     margin: 0px;
     outline: none;
     font-size: 1rem;
+    max-width: 80%;
 
     &:focus{
     border: 0px;
