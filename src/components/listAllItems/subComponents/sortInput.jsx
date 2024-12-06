@@ -6,7 +6,7 @@ export function SortInp(params) {
     const {originalArray, setSortedArray} = params;
     useEffect(()=> {
         setSortedArray(originalArray);
-    }, [])
+    }, []);
     return <sortInputStyles.InputWrapper>
             <sortInputStyles.SelectElem name="sortBy" id="sortBy" onChange={(e)=>{sortFunc(e, params)}}>
                 <option selected="selected" value="default">Default view</option>
