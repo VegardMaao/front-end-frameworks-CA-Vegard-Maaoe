@@ -7,7 +7,6 @@ import useCartStore from "../../../stateStores/cartStore";
 
 export function DataToComponent({data}) {
     const addItem = useCartStore(state => state.addItem);
-    const {items} =useCartStore();
     
     const sortedArr = data.sort(sortByReviews);
     let topResult = sortedArr[0];
