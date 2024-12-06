@@ -25,5 +25,7 @@ export function ViewItems(params){
             </Link>
           </shopStyles.ShopItem>
       ))}
+
+      {!output.length ? <h3>No results</h3> : ""}
       </shopStyles.AllItemDiv>
 }

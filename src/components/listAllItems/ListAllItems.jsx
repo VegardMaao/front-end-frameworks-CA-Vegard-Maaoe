@@ -21,8 +21,8 @@ export function ListAllItems({url}) {
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
         <shopStyles.SearchAndSort>
-          <Searchbar sortedData={sortedArray} setOutput={setOutput} />
-          <SortInp output={output} setOutput={setOutput} setSortedArray={setSortedArray}/>
+          <Searchbar originalArray={originalArray} sortedData={sortedArray} setOutput={setOutput} />
+          <SortInp originalArray={originalArray} output={output} setOutput={setOutput} setSortedArray={setSortedArray}/>
         </shopStyles.SearchAndSort>
         <ViewItems originalArray={originalArray} output={output} setOutput={setOutput} setSortedArray={setSortedArray}/>
     </shopStyles.ShopWrapper>

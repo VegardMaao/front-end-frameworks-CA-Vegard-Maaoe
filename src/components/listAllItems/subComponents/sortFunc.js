@@ -1,14 +1,16 @@
 import * as sortings from "../../sortingArray/sortingArray";
+import { resetInp } from "./resetInputs";
 
 export function sortFunc(e, params) {
     const sortBy = e.target.value;
-    const {output, setOutput, setSortedArray} = params;
+    const {originalArray, output, setOutput, setSortedArray} = params;
     let sortedArr;
 
 
     switch (sortBy) {
         case "default":
-            sortedArr = output;
+            sortedArr = originalArray;
+            resetInp("sort")
             setSortedArray(sortedArr);
             setOutput(sortedArr);
             break;
@@ -32,8 +34,8 @@ export function sortFunc(e, params) {
             break;
 
         default:
-            setSortedArray(output);
-            setOutput(output);
+            setSortedArray(originalArray);
+            setOutput(originalArray);
             break;
     }
 }
