@@ -9,7 +9,6 @@ export const FeaturedItemWrapper = styled.div`
     height: 50vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 
     @media${device.sm}{
@@ -17,6 +16,16 @@ export const FeaturedItemWrapper = styled.div`
     }
 }
 `;
+
+export const FeaturedInfoDiv = styled.div`
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: space-between;
+    `;
 
 export const FeaturedHeader = styled.h1`
     margin: 0px;

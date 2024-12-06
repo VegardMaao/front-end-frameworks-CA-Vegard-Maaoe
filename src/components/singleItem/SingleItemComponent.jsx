@@ -1,15 +1,14 @@
 import { useGetAPI } from "api";
-import { loadingStyle } from "styles";
-import { singleItemStyles } from "styles";
+import { loadingStyle, buttons, singleItemStyles } from "styles";
 import { DisplayPrice } from "../featuredItem/subComponents/displayPrice";
-import { buttons } from "styles";
+import useCartStore from "../../stateStores/cartStore";
+
 
 export function DisplaySingleItem(params) {
-
+    const addItem = useCartStore(state => state.addItem);
+    const {items} = useCartStore();
     const {itemURL, setTitle, setDescription} = params;
-
     const {data, isLoading, isError} = useGetAPI(itemURL);
-
     let itemData = data || [];
 
     if (isLoading) {
@@ -32,8 +31,6 @@ export function DisplaySingleItem(params) {
         <singleItemStyles.SingleIemParagraph>{description}</singleItemStyles.SingleIemParagraph>
         <DisplayPrice color="deepblue" discountedPrice={discountedPrice} regularPrice={price}/>
 
-        <buttons.ButtonComponent colors="primary" size="big">Buy now</buttons.ButtonComponent>
-
-
+        <buttons.ButtonComponent colors="primary" size="big" onClick={() => {addItem(itemData)}}>Buy now</buttons.ButtonComponent>
     </singleItemStyles.SingleItemWrapper>
 }
