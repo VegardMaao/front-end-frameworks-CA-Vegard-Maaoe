@@ -9,7 +9,7 @@ export function SortInp(params) {
     }, [])
     return <sortInputStyles.InputWrapper>
             <sortInputStyles.SelectElem name="sortBy" id="sortBy" onChange={(e)=>{sortFunc(e, params)}}>
-                <option value="default">Default</option>
+                <option value="default">Recommended items</option>
                 <option value="popular">Popular</option>
                 <option value="expensive">Price high-low</option>
                 <option value="cheap">Price low-high</option>
