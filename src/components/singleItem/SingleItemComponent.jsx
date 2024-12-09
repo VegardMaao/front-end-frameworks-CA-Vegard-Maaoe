@@ -6,7 +6,6 @@ import useCartStore from "../../stateStores/cartStore";
 
 export function DisplaySingleItem(params) {
     const addItem = useCartStore(state => state.addItem);
-    const {items} = useCartStore();
     const {itemURL, setTitle, setDescription} = params;
     const {data, isLoading, isError} = useGetAPI(itemURL);
     let itemData = data || [];
