@@ -6,8 +6,11 @@ export const CheckoutWrapper = styled.div`
 `;
 
 export const ProductsWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 0.5rem;
+    align-items: start;
+    margin: auto;
 `;
 
 export const SumOfProducts = styled.h2`
