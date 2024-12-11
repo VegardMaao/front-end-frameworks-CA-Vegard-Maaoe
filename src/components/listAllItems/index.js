@@ -1,1 +1,1 @@
-export * from "./ListAllItems.jsx";
+export * from "./ListAllItems";
