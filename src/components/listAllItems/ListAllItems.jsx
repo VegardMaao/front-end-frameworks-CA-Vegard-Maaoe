@@ -17,7 +17,7 @@ export function ListAllItems({url}) {
     if (isError) {
       return <div>Error loading data</div>;
     }
- 
+
     return <shopStyles.ShopWrapper>
       <h2>Shop:</h2>
         <shopStyles.SearchAndSort>
