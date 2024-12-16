@@ -30,11 +30,13 @@ export const TextLink = styled(NavLink)`
     font-size: 1rem;
     color: ${theme.color.deepblue};
     border: none;
+    margin-left: 2rem;
 
     @media(${device.sm}){
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
+    margin-left: 1rem;
     }
 `;
 

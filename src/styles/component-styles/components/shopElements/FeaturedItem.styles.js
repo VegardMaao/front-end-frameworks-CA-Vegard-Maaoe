@@ -13,6 +13,7 @@ export const FeaturedItemWrapper = styled.div`
 
     @media${device.sm}{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center url(${(props) => props.url});
+    height: 75vh;
     }
 }
 `;
@@ -41,6 +42,13 @@ export const FeaturedParagraph = styled.p`
 
 export const LineThrough = styled.span`
     text-decoration: line-through;
+`;
+
+export const ButtonBox = styled.div`
+    width: 70%;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-around;
 `;
 
 const fontColors = {

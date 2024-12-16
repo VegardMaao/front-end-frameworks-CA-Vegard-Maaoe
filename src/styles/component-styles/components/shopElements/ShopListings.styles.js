@@ -12,6 +12,7 @@ export const ShopWrapper = styled.div`
 export const SearchAndSort = styled.div`
     display: flex;
     width: 600px;
+    max-width: 100%;
     height: 125px;
     justify-content: space-around;
     align-items: center;

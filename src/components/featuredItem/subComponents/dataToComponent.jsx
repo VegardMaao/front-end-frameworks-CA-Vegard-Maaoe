@@ -19,10 +19,12 @@ export function DataToComponent({data}) {
                 <featuredItemStyles.FeaturedHeader colors="white">{title}</featuredItemStyles.FeaturedHeader>
                     <featuredItemStyles.FeaturedParagraph colors="white">{description}</featuredItemStyles.FeaturedParagraph>
                         <DisplayPrice color="white" discountedPrice={discountedPrice} regularPrice={price}/>
+                    <featuredItemStyles.ButtonBox>
                     <Link to={`/shop/${id}`}>
-                        <buttons.ButtonComponent colors="primary" size="big" >See Product</buttons.ButtonComponent>
+                        <buttons.ButtonComponent colors="primary" size="small" >See Product</buttons.ButtonComponent>
                     </Link>
-                    <buttons.ButtonComponent colors="inverted" size="big" onClick={() => {addItem(topResult)}}>Add to cart</buttons.ButtonComponent>
+                    <buttons.ButtonComponent colors="inverted" size="small" onClick={() => {addItem(topResult)}}>Add to cart</buttons.ButtonComponent>
+                    </featuredItemStyles.ButtonBox>
                 </featuredItemStyles.FeaturedInfoDiv>
         </featuredItemStyles.FeaturedItemWrapper>
 }
