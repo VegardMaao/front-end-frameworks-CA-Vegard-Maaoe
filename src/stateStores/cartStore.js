@@ -10,7 +10,9 @@ const useCartStore = create(persist(
     })),
     clearCart: () => set({ items: [] }),
     getTotalPrice: () => {
-      return get().items.reduce((total, item) => total + item.price, 0)
+      let num = get().items.reduce((total, item) => total + item.price, 0);
+      num = Math.round(num * 100) / 100;
+      return num;
     },
   }),
   {
