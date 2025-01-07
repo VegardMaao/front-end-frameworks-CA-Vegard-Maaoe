@@ -1,15 +1,24 @@
-import { useState } from "react";
-import {  Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { headerLinks } from "dataObjects/headerLinks";
 import {headerStyles} from "styles";
 import { Logo } from "./Logo";
+import useCartStore from "../../stateStores/cartStore";
 
 function Nav() {
-
+  const { items } = useCartStore();
   const [showMenu, setShowMenu] = useState(false);
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
+
+  useEffect(() => {
+    if (!items.length) {
+      setShowCart(false);
+    } else {
+      setShowCart(true);
+    }
+  }, [])
   
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
     return (
       <headerStyles.NavbarWrapper>
