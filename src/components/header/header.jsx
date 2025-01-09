@@ -4,15 +4,14 @@ import { headerLinks } from "dataObjects/headerLinks";
 import {headerStyles} from "styles";
 import { Logo } from "./Logo";
 import useCartStore from "../../stateStores/cartStore";
-import { showCartIcon, ShowCartIcon } from "../../helperFunctions/showCartIcon";
 
 function Nav() {
-  const { showCart, items } = useCartStore();
+  const { showCart, setShowCart } = useCartStore();
   const { pathname } = useLocation();  
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
-    showCartIcon(items)
+    setShowCart();
   }, [])
 
     return (

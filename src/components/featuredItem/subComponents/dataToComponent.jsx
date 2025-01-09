@@ -7,7 +7,7 @@ import useCartStore from "../../../stateStores/cartStore";
 
 export function DataToComponent({data}) {
     const addItem = useCartStore(state => state.addItem);
-    
+    const { setShowCart } = useCartStore();
     const sortedArr = data.sort(sortByReviews);
     let topResult = sortedArr[0];
     const {description, discountedPrice, id, image, price, title } = topResult || {};
@@ -23,7 +23,7 @@ export function DataToComponent({data}) {
                     <Link to={`/shop/${id}`}>
                         <buttons.ButtonComponent colors="primary" size="small" >See Product</buttons.ButtonComponent>
                     </Link>
-                    <buttons.ButtonComponent colors="inverted" size="small" onClick={() => {addItem(topResult)}}>Add to cart</buttons.ButtonComponent>
+                    <buttons.ButtonComponent colors="inverted" size="small" onClick={() => {addItem(topResult); setShowCart();}}>Add to cart</buttons.ButtonComponent>
                     </featuredItemStyles.ButtonBox>
                 </featuredItemStyles.FeaturedInfoDiv>
         </featuredItemStyles.FeaturedItemWrapper>
