@@ -19,7 +19,7 @@ export function DisplaySingleItem(params) {
         return <div>Error loading data</div>;
       }
 
-      const {description, discountedPrice, image, price, rating, reviews, title } = itemData;
+      const {description, discountedPrice, image, price, title } = itemData;
       const {url, alt} = image || {};
 
       setTitle(title);

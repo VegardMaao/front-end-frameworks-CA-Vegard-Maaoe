@@ -16,3 +16,7 @@ export const ProductsWrapper = styled.div`
 export const SumOfProducts = styled.h2`
     
 `;
+
+export const PaymentInfoWrapper = styled.div``;
+
+export const PaymentInfoForm = styled.form``;
