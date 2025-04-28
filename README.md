@@ -25,10 +25,7 @@ The project is an online shop, meant to be similar to Finn.no or other online sh
 
 ## Getting started
 
-First, clone the repo:
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-
-Then use NPM i to install all dependencies  
+Clone the repo and install the dependencies: npm install
 
 In the project directory, you can run:
 
