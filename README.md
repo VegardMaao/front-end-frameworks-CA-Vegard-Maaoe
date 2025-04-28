@@ -1,8 +1,34 @@
-# Getting Started with Create React App
+# Front-End Frameworks Course Assignment / online shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/user-attachments/assets/5233f86c-4f96-4e6e-a321-3ef997995f58)
 
-## Available Scripts
+This was my submission for the Front-End Frameworks course assignment, which is an online shop based on Noroffs Online Shop
+API. 
+
+## Description:
+
+The project is an online shop, meant to be similar to Finn.no or other online shopping platforms. Actions users can make include:
+- Searching for items
+- Sorting items by price or popularity
+- Adding items to carts and seeing the sum of all items in cart
+- Removing items from cart
+- Checking out
+
+## Built with: 
+- React
+- Styled Components
+- React hook form
+- Yup
+- React helmet
+- Zustand
+- Jest
+
+## Getting started
+
+First, clone the repo:
+git clone git@github.com:NoroffFEU/portfolio-1-example.git
+
+Then use NPM i to install all dependencies  
 
 In the project directory, you can run:
 
@@ -13,11 +39,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
