@@ -15,17 +15,26 @@ The project is an online shop, meant to be similar to Finn.no or other online sh
 - Checking out
 
 ## Built with: 
-- React
-- Styled Components
-- React hook form
-- Yup
-- React helmet
-- Zustand
-- Jest
+- [React](https://react.dev/)
+- [Styled Components](https://styled-components.com/)
+- [React hook form](https://react-hook-form.com/)
+- [Yup](https://yup-docs.vercel.app/)
+- [React helmet](https://www.npmjs.com/package/react-helmet)
+- [Zustand](https://zustand.docs.pmnd.rs/getting-started/introduction)
+- [Jest](https://jestjs.io/)
 
 ## Getting started
+1. Clone the repo:
 
-Clone the repo and install the dependencies: npm install
+```bash
+git clone git@github.com:NoroffFEU/portfolio-1-example.git
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
 
 In the project directory, you can run:
 
